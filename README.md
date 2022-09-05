@@ -1,3 +1,3 @@
-## Analisis numerico
+# Analisis numerico
 
-Recopilacion de ejercicios  
+Recopilacion de ejercicios
