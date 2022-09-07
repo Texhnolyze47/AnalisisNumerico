@@ -2,7 +2,7 @@
 import numpy as np
 import math as mt
 
-x = np.pi/3
+x = np.pi/4
 
 y = mt.exp(x)
 
