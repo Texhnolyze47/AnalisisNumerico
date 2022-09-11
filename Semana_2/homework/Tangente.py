@@ -1,6 +1,5 @@
-import math
-
 import math as mt
+
 
 x = mt.pi / 4
 
