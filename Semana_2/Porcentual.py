@@ -6,7 +6,7 @@ x = np.pi/3
 
 y = mt.cos(x)
 
-print(y)
+print("Valor real", y)
 
 y1 =  1 - x**2 /(2)
 e = (y - y1)

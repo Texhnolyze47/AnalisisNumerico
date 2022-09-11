@@ -8,7 +8,7 @@ y = mt.exp(x)
 
 print(y)
 
-y1 =  1 - x**2 /(2)
+y1 = 1 - x**2 /(2)
 e = (y - y1)
 
 ep = abs((y-y1) / y)

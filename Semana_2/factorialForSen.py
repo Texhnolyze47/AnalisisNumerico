@@ -10,7 +10,7 @@ y1=0
 y2 = 0
 # El valor del range es la cantidad de veces para acercarse al valor
 # real
-for i in range(20):
+for i in range(13):
     y1=y1+x**(2*i)/factorial(2*i)*(-1)**i
     y2=y2+x**(2*i+1)/factorial(2*i+1)*(-1)**i
 
