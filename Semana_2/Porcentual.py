@@ -8,7 +8,10 @@ y = mt.cos(x)
 
 print("Valor real", y)
 
+
 y1 =  1 - x**2 /(2)
+
+print("Valor aproximado", y1)
 e = (y - y1)
 
 ep = abs((y-y1) / y)

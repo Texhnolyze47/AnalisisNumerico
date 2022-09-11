@@ -6,9 +6,13 @@ x = np.pi/3
 
 y = mt.sin(x)
 
-print(y)
+print("Valor real ", y)
 
 y1 =  1 - x**2 /(2)
+
+print("Valor aproximado ", y1)
+
+
 e = (y - y1)
 
 ep = abs((y-y1) / y)
