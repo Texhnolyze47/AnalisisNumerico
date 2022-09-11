@@ -4,7 +4,7 @@ import math as mt
 
 x = np.pi/3
 
-y = mt.cos(x)
+y = mt.tan(x)
 
 print("Valor real", y)
 
