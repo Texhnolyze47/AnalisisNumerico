@@ -19,8 +19,7 @@ polinomio con el eje x. Dentro de este conjunto de metodos se destacan 3 casos:
 
 
 - Metodo de falsa de posicion
-  - 
-- Metodo de punto medio
+- Metodo de bisección
 - Metodo de Newton
  
     
