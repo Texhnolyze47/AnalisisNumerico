@@ -1,11 +1,22 @@
-import numpy as np
 import sympy as sp
 
 x = sp.Symbol("x")
 
 y = x ** 3 - 125
-x0 = 1
-x1 = 20
+
+y = input("Ingrese el polimonio a resolver")
+y = sp.simplify(y)
+s = 0
+while s == 0:
+    x0 = float(input("Proporcione un valor inicial"))
+    x1 = float(input("Proporcione un valor final"))
+    if y.subs(x,x0) * y.subs(x,x1) < 0:
+        s = 1
+    else:
+        print("Los valores proporcionados son incorrentos")
+
+#x0 = 6
+#x1 = 20
 xr = 0
 er = 1
 # contador para saber que nivel de aproximacion puede
