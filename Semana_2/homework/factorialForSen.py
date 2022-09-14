@@ -5,7 +5,6 @@ x = np.pi / 3
 # Expresiones
 yy = sin(x)
 print('VaIor real seno', yy)
-y1 = 0
 y2 = 0
 # El valor del range es la cantidad de veces para acercarse al valor
 # real

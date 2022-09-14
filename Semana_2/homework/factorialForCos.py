@@ -4,6 +4,7 @@ from math import *
 x = np.pi / 3
 # variable del valor real
 y = cos(x)
+print(x)
 print('VaIor real', y)
 
 y1 = 0
