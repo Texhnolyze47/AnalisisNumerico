@@ -17,6 +17,7 @@ while s == 0:
 
 # x0 = 6
 # x1 = 20
+# xr es la raiz
 xr = 0
 er = 1
 # contador para saber que nivel de aproximacion puede
