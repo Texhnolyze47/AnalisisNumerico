@@ -2,10 +2,10 @@ import sympy as sp
 
 x = sp.Symbol("x")
 
-y = x ** 3 - 125
+y = 4 * x ** 4 - 9 * x ** 2 + 1
 
-y = input("Ingrese el polimonio a resolver")
-y = sp.simplify(y)
+#y = input("Ingrese el polimonio a resolver")
+#y = sp.simplify(y)
 s = 0
 while s == 0:
     x0 = float(input("Proporcione un valor inicial"))
@@ -23,11 +23,14 @@ er = 1
 i = 0
 
 while er > 1e-15:
+    # xr es el valor de la raiz
     xr = float(x1 - y.subs(x, x1) * (x1 - x0) / (y.subs(x, x1) - y.subs(x, x0)))
+    # es menor a cero x0 es el valor de la raiz.
     if y.subs(x, x1) * y.subs(x, xr) < 0:
         xr0 = x0
         x0 = xr
-
+    # es mayor la x1 es el valor de la raiz
+    # en caso de que sea 0 entonces xr es la raiz
     else:
         xr0 = x1
         x1 = xr
