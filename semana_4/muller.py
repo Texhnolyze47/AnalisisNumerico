@@ -1,4 +1,3 @@
-import numpy as np
 import cmath as cmt
 import sympy as sp
 
