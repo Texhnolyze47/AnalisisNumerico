@@ -21,7 +21,7 @@ for i in range(5):
     c = y.subs(x,x2)
 
     xr0 = b-cmt.sqrt(b ** 2 - 4 * a * c)
-    xr1 = b-cmt.sqrt(b ** 2 - 4 * a * c)
+    xr1 = b+cmt.sqrt(b ** 2 - 4 * a * c)
     # expresiones para hallar las raices en caso de
     # la raiz xr0 mayor se usa una expresion para conseguir las raices
     if abs(xr0) > abs(xr1):
