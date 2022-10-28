@@ -5,6 +5,7 @@ from numpy.linalg import inv
 # a = np.array([1,-3,2.75,2.125,3.875,1.2])
 r = s = -1
 a = np.array([1.25, -3.875, 2.125, 2.75, -3.5, 1])
+b = 0
 n = int(len(a))
 er = 1
 es = 1
@@ -35,7 +36,7 @@ while n > 3:
 
         er = abs(d1[0, 0] / r)
         es = abs(d1[1, 0] / r)
-            # print(er,es)
+        # print(er,es)
 
         # print(r,s)
     x1 = (r + cm.sqrt(r ** 2 + 4 * s)) / 2
@@ -54,6 +55,21 @@ while n > 3:
     n = len(a)
     r = -0.5
     s = 0.5
+
+    n -= 2
+
+    for i in range(0, n + 1):
+        a[i] = b[i + 2]
+
+if n == 2:
+    r = -a[1] / a[2]
+    s = -a[0] / a[2]
+
+    x1 = (r + cm.sqrt(r ** 2 + 4 * s)) / 2
+    x2 = (r - cm.sqrt(r ** 2 + 4 * s)) / 2
+
+if n == 1:
+    x1 = -a[0] / a[1]
 
 print("\n", p1)
 # calcular el en caso de sea de orden 1 o orden 2
