@@ -1,33 +1,34 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-# for graph comparison purposes
 
 def divided_difference(x, y):
-    # length/number of datapoints
+    # cantidad de puntos de datos
     n = len(x)
-    # divided difference initialization
-    fdd = [[None for x in range(n)] for x in range(n)]
 
-    # finding divided difference
+    # inicialización una lista donde se
+    # guardara la diferencia dividida
+    dd = [[None for x in range(n)] for x in range(n)]
+
+    # donde se encuentra la diferencia dividida
     for i in range(n):
-        fdd[i][0] = y[i]
+        dd[i][0] = y[i]
     for j in range(1, n):
         for i in range(n - j):
-            fdd[i][j] = (fdd[i + 1][j - 1] - fdd[i][j - 1]) / (x[i + j] - x[i])
+            dd[i][j] = (dd[i + 1][j - 1] - dd[i][j - 1]) / (x[i + j] - x[i])
 
-    return fdd
+    return dd
 
 
-# polynomial at len(datapoints) order
+# polinomio en len(datapoints) orden
 def newton_polynomial(fdd, xi):
     n = len(fdd)
-    # f(X) values at different degrees
+    # valores de f(X) en diferentes grados
     yint = [None for x in range(n)]
-    # error value
+    # valor del error
     ea = [None for x in range(n)]
 
-    # interpolating xi
+    # interpolando xi
     xterm = 1
     yint[0] = fdd[0][0]
     for order in range(1, n):
@@ -43,9 +44,8 @@ x = [1, 4, 6, 5, 3, 1.5, 2.5, 3.5]
 y = [0, 1.3862944, 1.7917595, 1.6094379, 1.0986123, 0.4054641, 0.9162907, 1.2527630]
 xi = 2
 dd = divided_difference(x, y)
-df = pd.DataFrame(dd)
 
-# newton polynomial interpolation at varying orders
+# interpolación polinómica de newton en varios órdenes
 xxxx = np.linspace(1, 8, 200)
 yyyy = []
 for i in xxxx:
@@ -54,11 +54,11 @@ for i in xxxx:
 yyyy.append(newton_polynomial(dd))
 plt.plot(xxxx, yyyy)
 
-# actual function
+# función real
 xo = np.linspace(1, 8, 200)
 plt.plot(xo, np.log(xo), label="f(x)=lnx", color="black")
 
-# datapoints scatter plot
+# gráfico de dispersión de puntos de datos
 plt.scatter(x, y)
 
 plt.grid(True, which='both')
