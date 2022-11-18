@@ -40,9 +40,13 @@ def newton_polynomial(fdd, xi):
     return yint
 
 
-x = [1, 4, 6, 5, 3, 1.5, 2.5, 3.5]
-y = [0, 1.3862944, 1.7917595, 1.6094379, 1.0986123, 0.4054641, 0.9162907, 1.2527630]
-xi = 2
+#x = [1, 4, 6, 5, 3, 1.5, 2.5, 3.5]
+#y = [0, 1.3862944, 1.7917595, 1.6094379, 1.0986123, 0.4054641, 0.9162907, 1.2527630]
+#x = [1, 4, 6]
+#y = [0, 1.386294, 1.791760]
+x = [1,4,6, 5, 3, 1.5, 2.5, 3.5]
+y = [0, 1.3862944, 1.7917595, 1.6094379, 1.0986123 , 0.4054641, 0.9162907, 1.2527630]
+xi = 0
 dd = divided_difference(x, y)
 
 # interpolación polinómica de newton en varios órdenes
@@ -51,7 +55,6 @@ yyyy = []
 for i in xxxx:
     yyyy.append(newton_polynomial(dd, 0))
 
-yyyy.append(newton_polynomial(dd))
 plt.plot(xxxx, yyyy)
 
 # función real
